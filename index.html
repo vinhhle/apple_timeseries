@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>index.utf8</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Data Viz</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+<div class="btn-group pull-right float-right">
+<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
+
+
+
+
+</div>
+
+
+<font size ="5">
+<center>
+<strong>Apple Stock Price History</strong>
+</center>
+<p></font></p>
+<hr />
+<p>The visualization shows changes in the price and volume of Apple stock between 2005 and 2021. The top line chart represents the price, while the bottom column chart represents the volume. I also included important milestones and historical events that affected the stock.</p>
+<p>The dataset comes from <a href="https://www.nasdaq.com/market-activity/stocks/aapl">The Nasdaq Stock Market</a>.</p>
+<pre class="r"><code>library(tidyverse)
+library(lubridate)
+library(cowplot)
+
+text_color = &quot;#353d42&quot;
+caption_color = &quot;#666666&quot;
+font = &quot;Avenir Next&quot;
+
+aapl &lt;- read.csv(&quot;/Users/huvi/Downloads/AAPL.csv&quot;)%&gt;% 
+  select(date = Date, price = Open, volume = Volume) %&gt;%
+  filter(date &gt;= as.Date(&quot;2005-01-01&quot;)) %&gt;% 
+  mutate(
+    date = ymd(date)
+  )
+
+volume &lt;- ggplot(aapl, aes(x = date, y = volume)) +
+  geom_col(color=&quot;#69b3a2&quot;)+
+  scale_x_date(
+    expand = c(0,0),
+    breaks = as.Date(c(&quot;2006-01-01&quot;, &quot;2007-01-01&quot;, &quot;2008-01-01&quot;, &quot;2009-01-01&quot;,&quot;2010-01-01&quot;,&quot;2011-01-01&quot;, &quot;2012-01-01&quot;,&quot;2013-01-01&quot;, &quot;2014-01-01&quot;,&quot;2015-01-01&quot;, &quot;2016-01-01&quot;, &quot;2017-01-01&quot;,&quot;2018-01-01&quot;, &quot;2019-01-01&quot;,&quot;2020-01-01&quot;,&quot;2021-01-01&quot;)),
+    labels = seq(2006,2021, 1),
+    name = NULL
+  ) +
+  scale_y_reverse(
+    expand = c(0,0),
+    name = NULL
+  ) +
+  theme(
+    panel.background = element_blank(),
+    axis.text.x = element_blank(),
+    axis.ticks = element_blank(),
+    axis.text = element_blank()
+  )
+
+price &lt;- ggplot(aapl, aes(x = date, y = price)) +
+  #global financial crisis  
+  annotate(&quot;rect&quot;, xmin = as.Date(&quot;2007-12-01&quot;), xmax = as.Date(&quot;2009-06-01&quot;), ymin=0, ymax=Inf, alpha=0.2, fill=&quot;#cbcbcb&quot;) +
+  annotate(geom=&quot;text&quot;, x = as.Date(&quot;2008-09-01&quot;), y = 90, label = &quot;Global\nfinancial crisis&quot;, family = font, color = text_color, fontface = &quot;bold&quot;)+
+  
+  #Covid  
+  annotate(&quot;rect&quot;, xmin = as.Date(&quot;2019-12-01&quot;), xmax = as.Date(&quot;2021-05-01&quot;), ymin=0, ymax=Inf, alpha=0.2, fill=&quot;#cbcbcb&quot;) +
+  annotate(geom=&quot;text&quot;, x = as.Date(&quot;2020-08-01&quot;), y = 30, label = &quot;COVID-19\npandemic&quot;, family = font, color = text_color, fontface = &quot;bold&quot;)+  
+  geom_line(color=&quot;#69b3a2&quot;) +
+  scale_y_continuous(
+    expand = c(0,0),
+    name = NULL,
+    limits = c(0, 160),
+    breaks = seq(0,140,20),
+    labels = paste(&quot;$&quot;,seq(0,140,20))
+  ) +
+  scale_x_date(
+    expand = c(0,0),
+    breaks = as.Date(c(&quot;2006-01-01&quot;, &quot;2007-01-01&quot;, &quot;2008-01-01&quot;, &quot;2009-01-01&quot;,&quot;2010-01-01&quot;,&quot;2011-01-01&quot;, &quot;2012-01-01&quot;,&quot;2013-01-01&quot;, &quot;2014-01-01&quot;,&quot;2015-01-01&quot;, &quot;2016-01-01&quot;, &quot;2017-01-01&quot;,&quot;2018-01-01&quot;, &quot;2019-01-01&quot;,&quot;2020-01-01&quot;,&quot;2021-01-01&quot;)),
+    labels = seq(2006,2021, 1),
+    name = NULL
+  ) +
+  #10/01/2006: first macbookpro
+  annotate(geom=&quot;text&quot;, x = as.Date(&quot;2006-01-10&quot;), y = 12, label = &quot;First\nMacBook Pro&quot;, family = font, color = text_color, fontface = &quot;bold&quot;)+
+  geom_segment(x = as.Date(&quot;2006-01-10&quot;), xend = as.Date(&quot;2006-01-10&quot;), y = 4, yend = 7, color = text_color) +
+    
+  #09/01/2007: first AppleTV
+  annotate(geom=&quot;text&quot;, x = as.Date(&quot;2007-01-09&quot;), y = 29, label = &quot;First\nApple TV&quot;, family = font, color = text_color, fontface = &quot;bold&quot;)+
+  geom_segment(x = as.Date(&quot;2007-01-09&quot;), xend = as.Date(&quot;2007-01-09&quot;), y = 4, yend = 25, color = text_color) +
+    
+  #29/06/2007: first iphone
+  annotate(geom=&quot;text&quot;, x = as.Date(&quot;2007-06-29&quot;), y = 15, label = &quot;First\niPhone&quot;, family = font, color = text_color, fontface = &quot;bold&quot;)+
+  geom_segment(x = as.Date(&quot;2007-06-29&quot;), xend = as.Date(&quot;2007-06-29&quot;), y = 6, yend = 10, color = text_color) +
+    
+  #27/01/2010: first ipad
+  annotate(geom=&quot;text&quot;, x = as.Date(&quot;2010-01-27&quot;), y = 17, label = &quot;First iPad&quot;, family = font, color = text_color, fontface = &quot;bold&quot;)+
+  geom_segment(x = as.Date(&quot;2010-01-27&quot;), xend = as.Date(&quot;2010-01-27&quot;), y = 8, yend = 15, color = text_color) +
+    
+  #24/08/2011: Job resigns
+  annotate(geom=&quot;text&quot;, x = as.Date(&quot;2011-08-24&quot;), y = 26, label = &quot;Steve Jobs\nresigned&quot;, family = font, color = text_color, fontface = &quot;bold&quot;)+
+  geom_segment(x = as.Date(&quot;2011-08-24&quot;), xend = as.Date(&quot;2011-08-24&quot;), y = 14, yend = 21, color = text_color) +
+    
+  #12/12/2012: iphone 5
+  annotate(geom=&quot;text&quot;, x = as.Date(&quot;2012-09-17&quot;), y = 37, label = &quot;iPhone5&quot;, family = font, color = text_color, fontface = &quot;bold&quot;)+
+  annotate(geom=&quot;point&quot;, x=as.Date(&quot;2012-09-17&quot;), y = 25.5, size = 3, shape=21, fill=&quot;transparent&quot;, col = text_color) +
+  geom_segment(x = as.Date(&quot;2012-09-17&quot;), xend = as.Date(&quot;2012-09-17&quot;), y = 27, yend = 35, color = text_color) +
+
+  #12/12/2012: iphone XS
+  annotate(geom=&quot;text&quot;, x = as.Date(&quot;2018-09-21&quot;), y = 70, label = &quot;iPhone XS&quot;, family = font, color = text_color, fontface = &quot;bold&quot;)+
+  annotate(geom=&quot;point&quot;, x=as.Date(&quot;2018-09-21&quot;), y = 58, size = 3, shape=21, fill=&quot;transparent&quot;, col = text_color) +
+  geom_segment(x = as.Date(&quot;2018-09-21&quot;), xend = as.Date(&quot;2018-09-21&quot;), y = 59, yend = 68, color = text_color) + 
+    
+  #24/04/2015: first apple watch
+  annotate(geom=&quot;text&quot;, x = as.Date(&quot;2015-04-24&quot;), y = 45, label = &quot;First \nApple watch&quot;, family = font, color = text_color, fontface = &quot;bold&quot;)+
+  geom_segment(x = as.Date(&quot;2015-04-24&quot;), xend = as.Date(&quot;2015-04-24&quot;), y = 34, yend = 41, color = text_color) +
+    
+  #03/11/2017: iphoneX
+  annotate(geom=&quot;text&quot;, x = as.Date(&quot;2017-11-03&quot;), y = 95, label = &quot;iPhone X&quot;, family = font, color = text_color, fontface = &quot;bold&quot;)+
+  geom_segment(x = as.Date(&quot;2017-11-03&quot;), xend = as.Date(&quot;2017-11-03&quot;), y = 44, yend = 90, color = text_color) +
+  
+  #25/03/2019: Apple TV+
+  annotate(geom=&quot;text&quot;, x = as.Date(&quot;2019-03-25&quot;), y = 104, label = &quot;Apple TV+\nApple News+\nApple Arcade\nApple Card&quot;, family = font, color = text_color, fontface = &quot;bold&quot;)+
+  geom_segment(x = as.Date(&quot;2019-03-25&quot;), xend = as.Date(&quot;2019-03-25&quot;), y = 50, yend = 95, color = text_color) +  
+  
+  #20/09/2019: iphone11
+  annotate(geom=&quot;text&quot;, x = as.Date(&quot;2019-09-20&quot;), y = 85, label = &quot;iPhone 11&quot;, family = font, color = text_color, fontface = &quot;bold&quot;)+
+  geom_segment(x = as.Date(&quot;2019-09-20&quot;), xend = as.Date(&quot;2019-09-20&quot;), y = 58, yend = 83, color = text_color) + 
+    
+  #24/04/2020: iphonese
+  annotate(geom=&quot;text&quot;, x = as.Date(&quot;2020-02-20&quot;), y = 126, label = &quot;iPhone SE&quot;, family = font, color = text_color, fontface = &quot;bold&quot;)+
+  geom_segment(x = as.Date(&quot;2020-04-24&quot;), xend = as.Date(&quot;2020-04-24&quot;), y = 75, yend = 124, color = text_color) + 
+    
+  #26/01/2021: all-time high
+  annotate(geom=&quot;text&quot;, x = as.Date(&quot;2020-7-01&quot;), y = 152.16, label = &quot;All-time high \n$143.16&quot;, family = font, color = text_color, fontface = &quot;bold&quot;) +
+  annotate(geom=&quot;point&quot;, x=as.Date(&quot;2021-01-26&quot;), y=143.5, size = 3, shape=21, fill=&quot;transparent&quot;, col = text_color) +
+  geom_segment(x = as.Date(&quot;2021-01-26&quot;), xend = as.Date(&quot;2021-01-26&quot;), y = 145, yend = 155, color = text_color) + 
+    
+  theme(
+    panel.background = element_blank(),
+    panel.grid.major = element_line(color = &quot;#cbcbcb&quot;, size = 0.3, linetype = &quot;dashed&quot;),
+    axis.ticks.y = element_blank(),
+    axis.ticks.x = element_line(color = &quot;#cbcbcb&quot;, size = 0.5),
+    axis.text = element_text(family = font, size = 11, color = text_color, face = &quot;bold&quot;)
+  )
+
+plot_grid(price, volume, nrow = 2, align = c(&quot;v&quot;), rel_heights= c(3,1))</code></pre>
+<p><img src="apple_timeseries.png" width="3000px"></p>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
